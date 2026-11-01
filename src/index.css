@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --brand-red: #D71920;
+    --brand-green: #00843D;
+    --brand-black: #111111;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #111111;
+    background-color: #FAFAFA;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-headline {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom newspaper divider and dropcap styling */
+.editorial-dropcap::first-letter {
+  font-family: var(--font-serif);
+  float: left;
+  font-size: 3.8rem;
+  line-height: 0.82;
+  margin-right: 0.65rem;
+  margin-top: 0.15rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+/* Custom scrollbars for newspaper horizontal lists */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print styling */
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+}

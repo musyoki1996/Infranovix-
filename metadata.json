@@ -1,0 +1,8 @@
+{
+  "name": "The Kenyan Ledger",
+  "description": "Journalism That Matters. Kenya's premier independent digital newspaper and online news platform delivering authoritative coverage of national politics, all 47 counties, business, sports, technology, opinion, and breaking developments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
